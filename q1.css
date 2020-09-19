@@ -1,0 +1,113 @@
+/* Copyright 2020 comame */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: #414141;
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+header > * {
+    line-height: 3rem;
+}
+
+header .search {
+    background: #6b6b6b;
+    color: white;
+    outline: none;
+    margin-right: 1rem;
+    border: 0;
+    height: 1.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 3px;
+
+    transition: none 50ms ease-out;
+    transition-property: background-color;
+}
+
+header .search::placeholder {
+    color: white;
+}
+
+header .search:focus {
+    color: #6b6b6b;
+    background: white;
+}
+
+header ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+header li a:hover {
+    color: rgb(201, 201, 201);
+}
+
+header img {
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: text-bottom;
+}
+
+.content {
+    height: calc(100vh - 3rem);
+    display: grid;
+    grid-template-columns:  minmax(10rem, 20%) 1fr;
+}
+
+.content > * {
+    padding-top: 1rem;
+}
+
+.sidebar {
+    padding-left: 20%;
+    border-right: 1px gray solid;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main {
+    overflow-y: scroll;
+}
+
+.main ul {
+    margin: 0 auto;
+    max-width: 40rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.main li {
+    position: relative;
+    border: 1px gray solid;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.main button {
+    font-weight: bold;
+    position: absolute;
+    height: 2rem;
+    top: 1rem;
+    right: 1rem;
+}
