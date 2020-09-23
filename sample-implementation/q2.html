@@ -4,19 +4,25 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
-    <link rel='stylesheet' href='./q1.css'>
+    <link rel='stylesheet' href='./q2.css'>
 
     <!-- Copyright 2020 comame -->
 </head>
 <body>
     <header>
         <div class='left'>
-            <input class='search' placeholder='検索'>
-            <ul>
-                <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
-                <li><a>Item 3</a></li>
-            </ul>
+            <label for='menu-toggle'>
+                <img alt='Expand or collapse the navigation menu' src='./menu.svg'>
+            </label>
+            <input type='checkbox' id='menu-toggle'></input>
+            <div class='menu-items'>
+                <input class='search' placeholder='検索'>
+                <ul>
+                    <li><a href='#'>Item 1</a></li>
+                    <li><a href='#'>Item 2</a></li>
+                    <li><a href='#'>Item 3</a></li>
+                </ul>
+            </div>
         </div>
         <div class='right'>
             <a download href='./white-circle.png'><img alt='Profile icon' src='./white-circle.png'></a>
