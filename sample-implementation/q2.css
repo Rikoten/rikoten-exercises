@@ -96,8 +96,7 @@ header .menu-items {
     position: absolute; /* 既存の <header> のレイアウトに影響を与えない */
     top: 3rem;
     left: 0;
-    width: 100vw;
-    overflow-y: scroll;
+    width: 100%;
     height: calc(100vh - 3rem); /* <header> を除く高さ画面いっぱい */
 }
 
