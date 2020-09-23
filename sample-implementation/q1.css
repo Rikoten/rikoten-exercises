@@ -92,6 +92,7 @@ header img {
 .main ul {
     margin: 0 auto;
     max-width: 40rem;
+    width: 80%;
     list-style: none;
     padding-left: 0;
 }
