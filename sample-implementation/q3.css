@@ -1,0 +1,188 @@
+/* Copyright 2020 comame */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: #414141;
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0 1rem;
+}
+
+header > * {
+    line-height: 3rem;
+}
+
+header .search {
+    background: #6b6b6b;
+    color: white;
+    outline: none;
+    margin-right: 1rem;
+    border: 0;
+    height: 1.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 3px;
+
+    transition: none 50ms ease-out;
+    transition-property: background-color;
+}
+
+header .search::placeholder {
+    color: white;
+}
+
+header .search:focus {
+    color: #6b6b6b;
+    background: white;
+}
+
+header ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+header li a:hover {
+    color: rgb(201, 201, 201);
+}
+
+header .right img {
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: text-bottom;
+}
+
+.main ul {
+    margin: 0 auto;
+    max-width: 40rem;
+    width: 80%;
+    list-style: none;
+    padding-left: 0;
+}
+
+.main li {
+    position: relative;
+    border: 1px gray solid;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.main button {
+    font-weight: bold;
+    position: absolute;
+    height: 2rem;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Desktop */
+@media screen and (min-width: 501px) {
+    #menu-toggle, label[for=menu-toggle] {
+        display: none;
+    }
+
+    .content {
+        height: calc(100vh - 3rem);
+        display: grid;
+        grid-template-columns:  minmax(10rem, 20%) 1fr;
+    }
+
+    .content > * {
+        padding-top: 1rem;
+    }
+
+    .sidebar {
+        padding-left: 20%;
+        border-right: 1px gray solid;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .main {
+        overflow-y: scroll;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+    header label[for=menu-toggle] {
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+        padding: .5rem; /* Centering child <img> */
+        display: inline-block;
+    }
+
+    header label[for=menu-toggle] img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    header #menu-toggle {
+        display: none;
+    }
+
+    header .menu-items {
+        display: none;
+        background: #414141;
+        position: absolute; /* 既存の <header> のレイアウトに影響を与えない */
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 3rem); /* <header> を除く高さ画面いっぱい */
+    }
+
+    header .search {
+        margin: 1rem auto;
+        height: 3rem; /* モバイルデバイスには少し大きめに */
+        width: 80%;
+    }
+
+    header .menu-items ul {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    header .menu-items li {
+        line-height: 2.5;
+    }
+
+    header #menu-toggle:checked ~ .menu-items {
+        display: block;
+    }
+
+    header .menu-items * {
+        display: block;
+    }
+
+    .content > * {
+        padding-top: 2rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
